@@ -36,6 +36,9 @@ in the consuming application. See [ARCHITECTURE.md](https://github.com/DCRimbaud
 
 ## Start here
 
+- Architecture and test templates: [templates/README.md](https://github.com/DCRimbaud/dotnet-serial-toolkit/tree/main/templates)
+- FPGA/Vitis platform templates: [vivado-vitis-template](https://github.com/DCRimbaud/vivado-vitis-template)
+
 - Read [ADOPTION.md](https://github.com/DCRimbaud/dotnet-serial-toolkit/blob/main/ADOPTION.md) to choose the
   package, host sample, diagnostics, or architecture-gate path.
 - Run [the console command sample](https://github.com/DCRimbaud/dotnet-serial-toolkit/tree/main/samples/DCRimbaud.SerialToolkit.Console)

@@ -9,3 +9,5 @@
 - Host-runnable console command sample with fake and real serial transport paths.
 - Avalonia serial-port enumeration sample.
 - Adoption guide and end-to-end reuse examples.
+- Architecture design brief and host application test-template index.
+- Link to the Vivado/Vitis platform template repository.
