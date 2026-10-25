@@ -1,0 +1,8 @@
+<!-- SPDX-License-Identifier: MIT; Author: Xue Weisen <xueweisen96@gmail.com>; GitHub: https://github.com/DCRimbaud -->
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="DCRimbaud.SerialToolkit.Avalonia.App">
+  <Application.Styles>
+    <FluentTheme />
+  </Application.Styles>
+</Application>

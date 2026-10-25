@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Presentation\Fixture.Presentation.csproj" />
+    <ProjectReference Include="..\PresentationCore\Fixture.Presentation.Core.csproj" />
+    <ProjectReference Include="..\Infrastructure\Fixture.Infrastructure.csproj" />
+    <ProjectReference Include="..\Application\Fixture.Application.csproj" />
+  </ItemGroup>
+</Project>

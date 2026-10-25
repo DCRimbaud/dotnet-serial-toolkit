@@ -1,0 +1,45 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build-test:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+      - name: Restore
+        run: dotnet restore tests\DCRimbaud.SerialToolkit.Tests\DCRimbaud.SerialToolkit.Tests.csproj
+      - name: Build
+        run: dotnet build tests\DCRimbaud.SerialToolkit.Tests\DCRimbaud.SerialToolkit.Tests.csproj -c Release --no-restore
+      - name: Test
+        run: dotnet test tests\DCRimbaud.SerialToolkit.Tests\DCRimbaud.SerialToolkit.Tests.csproj -c Release --no-build --nologo --verbosity quiet
+      - name: Build Avalonia sample
+        run: dotnet build samples\DCRimbaud.SerialToolkit.Avalonia\DCRimbaud.SerialToolkit.Avalonia.csproj -c Release
+      - name: Validate architecture gate scripts
+        shell: pwsh
+        run: |
+          $files = Get-ChildItem tools\architecture\scripts -Filter *.ps1
+          foreach ($file in $files) {
+            [void][scriptblock]::Create((Get-Content -LiteralPath $file.FullName -Raw))
+          }
+
+      - name: Verify architecture gate accepts valid fixture
+        shell: pwsh
+        run: |
+          & tools\architecture\scripts\check_dotnet_architecture.ps1 -Root tools\architecture\fixtures\ValidApp
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Verify architecture gate rejects invalid fixture
+        shell: pwsh
+        run: |
+          & pwsh -NoProfile -ExecutionPolicy Bypass -File tools\architecture\scripts\check_dotnet_architecture.ps1 -Root tools\architecture\fixtures\InvalidApp
+          if ($LASTEXITCODE -ne 1) { throw "Expected architecture gate to reject invalid fixture." }
+          exit 0
