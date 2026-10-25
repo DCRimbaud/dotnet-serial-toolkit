@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: MIT; Author: Xue Weisen <xueweisen96@gmail.com>; GitHub: https://github.com/DCRimbaud -->
 <Project>
   <PropertyGroup>
-    <VersionPrefix>0.3.0</VersionPrefix>
+    <VersionPrefix>0.3.1</VersionPrefix>
     <Authors>Xue Weisen</Authors>
   </PropertyGroup>
 </Project>

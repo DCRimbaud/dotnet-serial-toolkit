@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3.1
+
+- added architecture design brief and test-template index
+- linked the Vivado/Vitis platform template repository
+- documentation-only release; runtime API is unchanged
+
 ## 0.3.0
 
 - Initial clean public baseline.
@@ -9,5 +15,3 @@
 - Host-runnable console command sample with fake and real serial transport paths.
 - Avalonia serial-port enumeration sample.
 - Adoption guide and end-to-end reuse examples.
-- Architecture design brief and host application test-template index.
-- Link to the Vivado/Vitis platform template repository.
