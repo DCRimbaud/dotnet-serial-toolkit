@@ -1,0 +1,17 @@
+<!-- SPDX-License-Identifier: MIT; Author: Xue Weisen <xueweisen96@gmail.com>; GitHub: https://github.com/DCRimbaud -->
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <IsPackable>false</IsPackable>
+    <AssemblyName>DCRimbaud.SerialToolkit.ConsoleSample</AssemblyName>
+    <RootNamespace>DCRimbaud.SerialToolkit.ConsoleSample</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\DCRimbaud.SerialToolkit\DCRimbaud.SerialToolkit.csproj" />
+    <PackageReference Include="System.IO.Ports" Version="10.0.12" />
+  </ItemGroup>
+</Project>

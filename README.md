@@ -15,6 +15,7 @@ Open-source .NET serial-device and diagnostics infrastructure.
 - offline package builder with SHA-256 manifest verification and path-safe staged extraction
 - caller-driven command response tracker with explicit/quiet/fire-and-forget completion modes
 - serial command executor combining transport writes, line decoding, timeout, and response tracking
+- host-runnable console command sample with fake and real transport paths
 - minimal Avalonia serial-port enumeration sample
 - integrated .NET dependency, public API, and change-coupling gates under `tools/architecture`
 
@@ -32,6 +33,13 @@ in the consuming application. See [ARCHITECTURE.md](https://github.com/DCRimbaud
 - device training logic
 - device-specific maps, calibration, or customer configuration
 - product UI or branding
+
+## Start here
+
+- Read [ADOPTION.md](https://github.com/DCRimbaud/dotnet-serial-toolkit/blob/main/ADOPTION.md) to choose the
+  package, host sample, diagnostics, or architecture-gate path.
+- Run [the console command sample](https://github.com/DCRimbaud/dotnet-serial-toolkit/tree/main/samples/DCRimbaud.SerialToolkit.Console)
+  to see command execution and structured logging without hardware.
 
 ## Build
 

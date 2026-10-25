@@ -23,6 +23,10 @@ jobs:
         run: dotnet test tests\DCRimbaud.SerialToolkit.Tests\DCRimbaud.SerialToolkit.Tests.csproj -c Release --no-build --nologo --verbosity quiet
       - name: Build Avalonia sample
         run: dotnet build samples\DCRimbaud.SerialToolkit.Avalonia\DCRimbaud.SerialToolkit.Avalonia.csproj -c Release
+      - name: Build console sample
+        run: dotnet build samples\DCRimbaud.SerialToolkit.Console\DCRimbaud.SerialToolkit.Console.csproj -c Release
+      - name: Run console sample smoke check
+        run: dotnet run --project samples\DCRimbaud.SerialToolkit.Console\DCRimbaud.SerialToolkit.Console.csproj -c Release --no-build
       - name: Validate architecture gate scripts
         shell: pwsh
         run: |

@@ -26,6 +26,12 @@ orchestration. Toolkit components may be composed directly; there is no requirem
 additional interface. Introduce an interface when a test seam, alternate implementation, lifecycle boundary,
 or API contract needs it.
 
+## Reuse entry points
+
+- [ADOPTION.md](ADOPTION.md) maps common project needs to package, sample, diagnostics, or architecture-gate reuse.
+- `samples/DCRimbaud.SerialToolkit.Console` demonstrates command execution and JSONL evidence without hardware.
+- `samples/DCRimbaud.SerialToolkit.Avalonia` demonstrates UI-side port enumeration.
+
 Shared records, policies, and result types should have one definition. Copying them to keep namespaces
 "self-contained" creates duplicate contracts and is prohibited. Related classes in one feature area may depend
 on each other without losing cohesion.
