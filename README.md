@@ -44,6 +44,13 @@ in the consuming application. See [ARCHITECTURE.md](https://github.com/DCRimbaud
 - Run [the console command sample](https://github.com/DCRimbaud/dotnet-serial-toolkit/tree/main/samples/DCRimbaud.SerialToolkit.Console)
   to see command execution and structured logging without hardware.
 
+## Related repositories
+
+- [DCRimbaud/embedded-c-kit](https://github.com/DCRimbaud/embedded-c-kit) - portable allocation-free C
+  firmware infrastructure.
+- [DCRimbaud/vivado-vitis-template](https://github.com/DCRimbaud/vivado-vitis-template) - Vivado/Vitis
+  Block Design, XSA, FreeRTOS skeleton, and AXI-Lite RTL templates.
+
 ## Build
 
 ```powershell
